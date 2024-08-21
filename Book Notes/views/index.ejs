@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Notes</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <h1>Books I've Read</h1>
+    <ul>
+        <% books.forEach(book => { %>
+            <li>
+                <img src="<%= book.cover_url %>" alt="Book Cover" style="height: 100px;">
+                <h2><%= book.title %> by <%= book.author %></h2>
+                <p>Rating: <%= book.rating %>/5</p>
+                <p>Date Read: <%= book.date_read %></p>
+                <p><%= book.notes %></p>
+            </li>
+        <% }) %>
+    </ul>
+    <form action="/books/add" method="POST">
+        <input type="text" name="title" placeholder="Book Title" required>
+        <input type="text" name="author" placeholder="Author" required>
+        <input type="number" name="rating" placeholder="Rating (1-5)" min="1" max="5" required>
+        <input type="date" name="date_read" placeholder="Date Read">
+        <textarea name="notes" placeholder="Notes"></textarea>
+        <button type="submit">Add Book</button>
+    </form>
+</body>
+</html>
