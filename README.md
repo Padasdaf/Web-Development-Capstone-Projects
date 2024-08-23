@@ -1,2 +1,2 @@
-# Web-Development-Capstone-Projects
+# Web Development Capstone Projects
 A series of capstone projects showcasing my web development skills using technologies like Node.js, EJS, and PostgreSQL. The projects include a professional online resume, a personal website, a blog application, a programming quotes generator, and a book notes app, each focusing on different aspects of full-stack development. These hands-on projects provided practical experience in building responsive, user-friendly web applications while integrating APIs and managing data persistence, demonstrating my proficiency in modern web technologies.
